@@ -341,7 +341,7 @@
         </ul>
       </div>
     </section>
-    <!-- <section class="section">
+    <section class="section">
       <div class="container">
         <h2 class="title">Постійні клієнти</h2>
         <ul class="clients-list list">
@@ -389,9 +389,9 @@
           </li>
         </ul>
       </div>
-    </section> -->
+    </section>
   </main>
-  <!-- <footer class="footer">
+  <footer class="footer">
     <div class="footer__container container">
       <div>
         <a class="logo footer__logo" href="./index.html" lang="en">Web<span class="logo--color-white">Studio</span></a>
@@ -446,9 +446,8 @@
       <div class="footer__form-signup">
         <p class="footer__subtitle">Підпишіться на розсилку</p>
         <form class="footer__form-field">
-          <label>
-            <input class="footer__form-input" type="email" name="user-email" placeholder="E-mail" />
-          </label>
+          <label for="email" class="visually-hidden"></label>
+          <input class="footer__form-input" id="email" type="email" name="user-email" placeholder="E-mail" />
           <button class="primary-button footer__form-button" type="submit">
             Підписатися
             <svg class="footer__form-icon" width="24" height="24">
@@ -459,7 +458,7 @@
       </div>
     </div>
   </footer>
-  <div class="backdrop is-hidden" data-modal>
+  <!-- <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button class="modal__close-button" data-modal-close type="button">
         <svg width="18" height="18">
