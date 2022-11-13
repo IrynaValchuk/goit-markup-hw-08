@@ -1,5 +1,9 @@
 .skills {
   padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .skills__list {

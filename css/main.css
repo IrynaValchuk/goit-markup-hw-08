@@ -1085,6 +1085,11 @@ img {
 .skills {
   padding-top: 0;
 }
+@media screen and (max-width: 1199px) {
+  .skills {
+    display: none;
+  }
+}
 
 .skills__list {
   display: -webkit-box;
