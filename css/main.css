@@ -391,13 +391,9 @@ img {
 
 .modal__title {
   font-size: 20px;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 12px;
-}
-@media screen and (max-width: 1199px) {
-  .modal__title {
-    line-height: 1.5;
-  }
 }
 @media screen and (min-width: 1200px) {
   .modal__title {
@@ -500,20 +496,17 @@ img {
 
 .modal__checkbox-label {
   display: block;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--text-color-secondary);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-@media screen and (max-width: 1199px) {
-  .modal__checkbox-label {
-    font-size: 12px;
-    line-height: 1.17;
-  }
-}
 @media screen and (min-width: 1200px) {
   .modal__checkbox-label {
+    font-size: 14px;
     line-height: 1.71;
   }
 }
@@ -1210,12 +1203,17 @@ img {
 }
 
 .header__socials-link {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--color-brand);
   text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .header__socials-link {
+    font-size: 18px;
+  }
 }
 
 .hero {
