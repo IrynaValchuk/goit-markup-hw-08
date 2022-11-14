@@ -26,8 +26,8 @@
           </svg>
         </button>
       </div>
-      <div class="header__container-menu js-menu-container">
-        <button class="button-menu header__close-button-menu js-close-menu" type="button">
+      <div class="header__menu-container js-menu-container">
+        <button class="button-menu header__menu-close-button js-close-menu" type="button">
           <svg width="40" height="40">
             <use href="./images/icons.svg#icon-menu-btn-close"></use>
           </svg></button>
@@ -57,10 +57,10 @@
           </li>
         </ul>
         <ul class="header__socials-list list">
-          <li><a class="header__socials-link" href="#">Instagram</a></li>
-          <li><a class="header__socials-link" href="#">Twitter</a></li>
-          <li><a class="header__socials-link" href="#">Facebook</a></li>
-          <li><a class="header__socials-link" href="#">LinkedIn</a></li>
+          <li class="header__socials-item"><a class="header__socials-link" href="#">Instagram</a></li>
+          <li class="header__socials-item"><a class="header__socials-link" href="#">Twitter</a></li>
+          <li class="header__socials-item"><a class="header__socials-link" href="#">Facebook</a></li>
+          <li class="header__socials-item"><a class="header__socials-link" href="#">LinkedIn</a></li>
         </ul>
       </div>
 
@@ -443,19 +443,18 @@
           </li>
         </ul>
       </div>
-      <div class="footer__form-signup">
-        <p class="footer__subtitle">Підпишіться на розсилку</p>
-        <form class="footer__form-field">
-          <label for="email" class="visually-hidden"></label>
-          <input class="footer__form-input" id="email" type="email" name="user-email" placeholder="E-mail" />
-          <button class="primary-button footer__form-button" type="submit">
-            Підписатися
-            <svg class="footer__form-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </form>
-      </div>
+      <form class="footer__form-signup">
+        <div class="footer__form-field">
+          <label class="footer__form-label" for="email">Підпишіться на розсилку</label>
+          <input class="footer__form-input" type="email" id="email" name="user-email" placeholder="E-mail" />
+        </div>
+        <button class="primary-button footer__form-button" type="submit">
+          Підписатися
+          <svg class="footer__form-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-send"></use>
+          </svg>
+        </button>
+      </form>
     </div>
   </footer>
   <!-- <div class="backdrop is-hidden" data-modal>

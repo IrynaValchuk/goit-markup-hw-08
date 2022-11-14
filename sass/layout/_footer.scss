@@ -5,29 +5,29 @@
 
 .footer__container {
   display: flex;
-  align-items: center;
-  gap: 60px;
-  text-align: center;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
-    // align-items: center;
-    // gap: 60px;
-    // text-align: center;
+    align-items: center;
   }
 
-    @media screen and (min-width: 768px) {
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: baseline;
-      // gap: 60px;
-      // text-align: center;
-    }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    gap: 60px;
+  }
 
-        @media screen and (min-width: 1200px) {
-          // align-items: baseline;
-          gap: 70px;
-        } 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .footer__logo {
@@ -91,31 +91,63 @@
 
 /* Form footer */
 .footer__form-signup {
-  width: 100%
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 
-  // margin-left: auto; desc
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-end;
+    gap: 12px;
+  }
 }
 
 .footer__form-field {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
 
-  // display: flex;  desc
-  // align-items: center;
-  // gap: 12px;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
 }
+
 .footer__form-label {
-  width: 100%;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-white);
 }
 
 .footer__form-input {
-  width: 100%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 
-  // width: 358px;
+  @media screen and (min-width:768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+
   height: 50px;
   padding-left: 16px;
 
@@ -145,6 +177,10 @@
   &:hover,
   &:focus {
     background-color: var(--bgc-inverted);
+  }
+
+  @media screen and (max-width:767px) {
+    margin: 0 auto;
   }
 }
 
