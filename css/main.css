@@ -465,23 +465,13 @@ img {
 
 .modal__checkbox-field {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 30px;
-  padding: 0 12px;
 }
 
 .modal__checkbox-icon {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   border: 2px solid var(--text-color-primary);
@@ -493,9 +483,15 @@ img {
   background-color: var(--color-brand);
   border-color: var(--color-brand);
 }
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-icon {
+    left: 12px;
+  }
+}
 
 .modal__checkbox-label {
   display: block;
+  padding-left: 24px;
   font-size: 12px;
   line-height: 1.17;
   color: var(--text-color-secondary);
@@ -508,6 +504,7 @@ img {
   .modal__checkbox-label {
     font-size: 14px;
     line-height: 1.71;
+    padding-left: 36px;
   }
 }
 
@@ -816,66 +813,17 @@ img {
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) {
-  .footer__form-signup {
+
+@media screen and (min-width: 1200px) {
+  .footer__form-field {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer__form-signup {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer__form-signup {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
     gap: 12px;
   }
-}
-
-.footer__form-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media screen and (max-width: 767px) {
-  .footer__form-field {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .footer__form-field {
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer__form-field {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-.footer__form-label {
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--color-white);
 }
 
 .footer__form-input {
@@ -894,6 +842,9 @@ img {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.footer__form-input:focus {
+  border-color: var(--color-brand);
+}
 @media screen and (max-width: 767px) {
   .footer__form-input {
     width: 100%;
@@ -904,13 +855,15 @@ img {
     width: 450px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .footer__form-input {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__form-input {
     width: 358px;
   }
-}
-.footer__form-input:focus {
-  border-color: var(--color-brand);
 }
 
 .footer__form-button {
@@ -926,7 +879,7 @@ img {
 .footer__form-button:hover, .footer__form-button:focus {
   background-color: var(--bgc-inverted);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .footer__form-button {
     margin: 0 auto;
   }

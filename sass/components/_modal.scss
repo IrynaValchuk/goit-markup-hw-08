@@ -133,43 +133,43 @@
 
 .modal__checkbox-field {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 30px;
-  padding: 0 12px;
 }
 
 .modal__checkbox-icon {
   position: absolute;
   top: 50%;
-  left: 12px;
+  left: 0;
   transform: translateY(-50%);
-
   border: 2px solid var(--text-color-primary);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   .modal__checkbox-input:checked + & {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
   }
+
+  @media screen and (min-width: 1200px) {
+    left: 12px;
+  }
 }
 
 .modal__checkbox-label {
   display: block;
+  padding-left: 24px;
   
   font-size: 12px;
   line-height: 1.17;
   color: var(--text-color-secondary);
-
   user-select: none;
 
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.71;
-  }
+@media screen and (min-width: 1200px) {
+  font-size: 14px;
+  line-height: 1.71;
+  padding-left: 36px;
+}  
 }
 
 .modal__checkbox-link {
